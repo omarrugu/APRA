@@ -185,7 +185,13 @@ public class UserInterfaceButtons : MonoBehaviour
 		GameObject.FindWithTag ("Model").transform.Translate (translationSpeed * Time.deltaTime, 0, 0);  // backward
 	}
 
-	public void ChangeScene (string a)
+    public void MoveCamera()
+    {
+        // camara.transform.Translate(new Vector3(x,y,z))
+        Camera.main.transform.Translate(new Vector3(930, 0, 0));
+    }
+
+    public void ChangeScene (string a)
 	{
 		Application.LoadLevel (a);
 	}
